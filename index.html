@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generátor Hlášek</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 1rem;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #e2e8f0;
+    }
+
+    .card {
+      background: #1e293b;
+      border-radius: 1rem;
+      padding: 2.5rem 2rem;
+      margin-bottom: 2rem;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    #hlaska {
+      font-size: 1.4rem;
+      line-height: 1.6;
+      color: #f1f5f9;
+      font-style: italic;
+    }
+
+    button {
+      background: #3b82f6;
+      color: #fff;
+      border: none;
+      padding: 0.9rem 2.5rem;
+      font-size: 1.1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+
+    button:active {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Generátor Hlášek</h1>
+    <div class="card">
+      <p id="hlaska">Klikni na tlačítko a získej hlášku!</p>
+    </div>
+    <button id="btn">Další hláška</button>
+  </div>
+
+  <script>
+    const hlasky = [
+      "Kdo jinému jámu kopá, je zřejmě hrobař.",
+      "Práce šlechtí člověka, ale já jsem přece šlechtic od narození.",
+      "Ráno vstávám, protože leže se pracovat nedá. Tedy dá, ale šéf to neschvaluje.",
+      "Nejlepší věci v životě jsou zadarmo. Zbytek stojí příliš mnoho.",
+      "Nemám rád pondělky. Ale kdo je má?",
+      "Čas jsou peníze — proto je nikdy nemám.",
+      "Život je krátký, úsměv je zadarmo a káva je nutnost.",
+      "Dnes udělám zítra to, co jsem měl udělat včera.",
+      "Jsem na dietě. Jím jen to, co chci.",
+      "Kdyby lež měla krátké nohy, internet by nechodil.",
+      "Nejsem líný. Jen šetřím energii.",
+      "Moje oblíbená poloha na cvičení? Ležet na gauči.",
+      "Peníze nejsou všechno, ale zkuste si bez nich koupit něco.",
+      "Chytrý telefon, hloupý majitel.",
+      "Dneska je ideální den na to, dělat absolutně nic."
+    ];
+
+    let posledniIndex = -1;
+
+    function nahodnaHlaska() {
+      let index;
+      do {
+        index = Math.floor(Math.random() * hlasky.length);
+      } while (index === posledniIndex && hlasky.length > 1);
+      posledniIndex = index;
+      return hlasky[index];
+    }
+
+    document.getElementById("btn").addEventListener("click", function () {
+      document.getElementById("hlaska").textContent = nahodnaHlaska();
+    });
+  </script>
+</body>
+</html>
