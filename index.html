@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generátor Hlášek</title>
+  <title>Vtipný Hláškovník</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,13 +15,13 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: "Montserrat", sans-serif;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #0f172a;
-      color: #f8fafc;
+      background: #004d4d;
+      color: #80ffff;
       padding: 1rem;
     }
 
@@ -30,12 +33,13 @@
 
     h1 {
       font-size: 2rem;
+      font-weight: 700;
       margin-bottom: 2rem;
-      color: #e2e8f0;
+      color: #80ffff;
     }
 
     .card {
-      background: #1e293b;
+      background: #003838;
       border-radius: 1rem;
       padding: 2.5rem 2rem;
       margin-bottom: 2rem;
@@ -49,37 +53,56 @@
     #hlaska {
       font-size: 1.4rem;
       line-height: 1.6;
-      color: #f1f5f9;
+      color: #b3ffff;
       font-style: italic;
     }
 
     button {
-      background: #3b82f6;
-      color: #fff;
+      background: #008080;
+      color: #e0ffff;
       border: none;
       padding: 0.9rem 2.5rem;
+      font-family: "Montserrat", sans-serif;
       font-size: 1.1rem;
+      font-weight: 600;
       border-radius: 0.5rem;
       cursor: pointer;
       transition: background 0.2s;
     }
 
     button:hover {
-      background: #2563eb;
+      background: #006666;
     }
 
     button:active {
-      background: #1d4ed8;
+      background: #005555;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      10% { transform: translateX(-8px) rotate(-1deg); }
+      20% { transform: translateX(8px) rotate(1deg); }
+      30% { transform: translateX(-6px) rotate(-0.5deg); }
+      40% { transform: translateX(6px) rotate(0.5deg); }
+      50% { transform: translateX(-4px); }
+      60% { transform: translateX(4px); }
+      70% { transform: translateX(-2px); }
+      80% { transform: translateX(2px); }
+      90% { transform: translateX(-1px); }
+    }
+
+    body.shake {
+      animation: shake 0.6s ease-in-out;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Generátor Hlášek</h1>
+    <h1>Vtipný Hláškovník</h1>
     <div class="card">
       <p id="hlaska">Klikni na tlačítko a získej hlášku!</p>
     </div>
-    <button id="btn">Další hláška</button>
+    <button id="btn">Zlepši mi den</button>
   </div>
 
   <script>
@@ -98,12 +121,122 @@
       "Moje oblíbená poloha na cvičení? Ležet na gauči.",
       "Peníze nejsou všechno, ale zkuste si bez nich koupit něco.",
       "Chytrý telefon, hloupý majitel.",
-      "Dneska je ideální den na to, dělat absolutně nic."
+      "Dneska je ideální den na to, dělat absolutně nic.",
+      "Můj mozek má příliš mnoho záložek otevřených.",
+      "Nemůžu uvěřit, že nejsem placený za spánek. Jsem v tom expert.",
+      "Dneska jsem vstával dvakrát — jednou z postele a jednou ze židle.",
+      "Moje životní motto: udělej minimum, doufej v maximum.",
+      "Řekli mi, ať následuju své sny. Tak jsem šel zpátky do postele.",
+      "Jsem multitasker — dokážu ignorovat spoustu věcí najednou.",
+      "Život bez kávy? Raději ani nežít.",
+      "Mám rád práci. Dokážu se na ni dívat celé hodiny.",
+      "Můj šéf říká, že mám dobrý smysl pro humor. Hlavně když žádám o zvýšení platu.",
+      "Proč být normální, když můžeš být divný zadarmo?",
+      "Na co budík, když mám úzkost?",
+      "Kdyby se za lenost dávaly medaile, vstal bych si pro ni… možná zítra.",
+      "Dneska jsem se rozhodl být produktivní. Zatím jsem o tom jen přemýšlel.",
+      "Svědomí mám čisté. Nepoužívám ho.",
+      "Každý den je nová příležitost zůstat v posteli.",
+      "Moje paměť je jako WiFi — čím dál od zdroje, tím horší signál.",
+      "Jsem jako staré víno — s věkem jen víc ležím.",
+      "Kdybych dostal korunu za každou chytrou myšlenku, měl bych asi tak dvě koruny.",
+      "Sport? Pravidelně přepínám kanály.",
+      "Říkají, že peníze nerostou na stromech. Ale papír jo, takže co se tam děje?",
+      "Moje krevní skupina je káva pozitivní.",
+      "Jsem v životní formě. Bohužel ta forma je bramborák.",
+      "Proč chodím do práce? Protože WiFi tam je zadarmo.",
+      "Neodkládej na zítra to, co můžeš zrušit úplně.",
+      "Když se život dá do citrónů, já chci zpátky do postele.",
+      "Nic mě nemotivuje tak jako blížící se deadline, co nestihnu.",
+      "Nejsem závislý na kávě. Říkám tomu vášnivý vztah.",
+      "Moje procrastinace je na tak vysoké úrovni, že ji můžu nazvat uměním.",
+      "Jediný maraton, co jsem kdy zvládl, byl maraton seriálů.",
+      "Včera jsem řekl, že začnu od pondělí. Dneska je úterý a nic se nestalo.",
+      "Můj životní cíl? Aby pondělí bylo volno.",
+      "Koupil jsem si knihu o motivaci. Zatím jsem ji neotevřel.",
+      "Mám tolik plánů, až je z toho neplánuji.",
+      "Kolik programátorů potřebuješ na výměnu žárovky? Žádného — to je hardwarový problém.",
+      "Jsem jako cloud — přítomný všude a nikdo přesně neví, kde jsem.",
+      "Život je příliš krátký na špatnou kávu a dlouhé porady.",
+      "Snídaně šampionů? Zbytky včerejší pizzy.",
+      "Neříkej mi workoholik. Říkej mi dobrodruh ve světě deadlinů.",
+      "Dnes jsem si udělal seznam úkolů. Nejdřív jsem si do něj zapsal: napsat seznam.",
+      "Na otázku 'Kde se vidíš za 5 let?' odpovídám: 'V posteli, doufám.'",
+      "Moje WiFi heslo je silnější než moje životní rozhodnutí.",
+      "Říkám si realista. Ostatní říkají pesimista. Šéf říká líný.",
+      "Dokončil jsem puzzle za 3 měsíce. Na krabici psali 3–5 let, tak jsem vlastně génius.",
+      "Můj ideální víkend? Sobota, neděle a pondělí.",
+      "Když říkám, že cvičím, myslím tím, že chodím do lednice a zpátky.",
+      "Šel jsem běhat. Pak jsem si říkal, proč vlastně, a vrátil se.",
+      "Jsem jako Excel — vypadám jednoduše, ale uvnitř je chaos.",
+      "Poslední dobou je u mě každý den legday. Protože jen ležím.",
+      "Mám dva režimy: 'nemůžu vstát' a 'nemůžu usnout'.",
+      "Chtěl jsem být astronaut, ale pak jsem zjistil, že tam nemají WiFi.",
+      "Říkám kávě, že je moje první láska. Partner to bere sportovně.",
+      "Nejsem na sociálních sítích závislý. Prostě tam žiju.",
+      "Kolega mi říkal, ať myslím pozitivně. Tak jsem si dal dvojitý espresso.",
+      "Nejsem líný — jen mám energeticky úsporný režim.",
+      "Můj sen je mít sen, na který bych se těšil.",
+      "Vstávám v pět. Ne ráno, odpoledne.",
+      "Kdybych měl za každý dobrý nápad korunu, měl bych inflaci.",
+      "Říkají mi borec. Hlavně když si dokážu uvařit oběd.",
+      "Můj životopis? Stránka plná optimistických lží.",
+      "Neříkejte mi perfekcionista. Říkejte mi „nikdy nic nedodělá".",
+      "Jediné rande, které nikdy nezklamalo, je rande s lednicí.",
+      "Moje strategie v životě: předstírej, že víš, co děláš.",
+      "Google mě zná líp než moje máma.",
+      "Nemám nepřátele. Jen lidi, co mě neznají dost dobře.",
+      "Chtěl jsem změnit svět, ale nenašel jsem heslo k WiFi.",
+      "Dělám chyby, ale alespoň nové.",
+      "Jsem jako ponožka v pračce — občas se prostě ztratím.",
+      "Život je jako jízda na kole. Akorát kolo hoří a všechno hoří.",
+      "Fitness? Myslel jsem, že jsi říkal pizza.",
+      "Moje ego je větší než můj účet v bance.",
+      "Každé ráno začínám s úsměvem. Pak se podívám na hodiny.",
+      "Nemůžu být chudý — jsem přece bohatý duchem.",
+      "Dieta začíná v pondělí. Každé pondělí. Každý týden.",
+      "Jsem odborník na nic. Ale velmi zkušený.",
+      "Říkají, že smích prodlužuje život. V tom případě žiju věčně.",
+      "Mám alergii na brzké ráno.",
+      "Když zavřu oči v práci, není to spánek — je to meditace.",
+      "Neslibuji, ale snažím se. Neslibuji ani to snažení.",
+      "Můj budík a já máme toxický vztah.",
+      "Moje životní filosofie: když to nejde silou, jde to ještě větší silou… nebo to nech být.",
+      "Dneska je můj den. Říkám si to každý den. Zatím to nevyšlo.",
+      "Vstal jsem levou nohou. Druhou jsem nechal v posteli.",
+      "Jsem jako kaktus — přežiju cokoliv a bodám, když mě někdo otravuje.",
+      "Mám rád dlouhé procházky. Hlavně k lednici.",
+      "Říkali mi, že mám potenciál. Nikdo neřekl, na co.",
+      "Moje oblíbené cvičení? Skákání k závěrům.",
+      "Jsem tak produktivní, že jsem si na to založil tabulku. V ní je zatím jen nadpis.",
+      "Dnes jsem se naučil něco nového. Zapomněl jsem to, ale to je detail.",
+      "Jsem jako WiFi v metru — občas funguju, občas ne, a nikdo neví proč.",
+      "Život je jako šachy. Nevím hrát šachy."
+    ];
+
+    const vulgarniHlasky = [
+      "Do prdele, to byl teda den. Ale aspoň jsem se nezbláznil… zatím.",
+      "Řekl bych, že je to na hovno, ale to by bylo urážka hovna.",
+      "Práce je jak záchod — všichni na ni serou, ale musí tam chodit.",
+      "Kdo se směje naposled, ten to asi nepochopil, ten vůl.",
+      "Můj šéf mi řekl, ať dám do práce srdce. Tak jsem mu řekl, ať mi nelez do zadku.",
+      "Život je krásnej. Ale někdy je to pěkná sviňárna.",
+      "Dneska mám náladu jak rozbitej záchod — všechno mě sere.",
+      "Kdo říká, že peníze nesmrdí, ten nikdy nepracoval za minimálku, bůhví proč.",
+      "Ráno jsem se podíval do zrcadla a řekl si: ty vole, ty to zase zvládneš.",
+      "Jsem v pohodě. Tedy v takový pohodě, kdy chceš poslat všechno do háje.",
     ];
 
     let posledniIndex = -1;
+    let pocetKliknuti = 0;
 
     function nahodnaHlaska() {
+      pocetKliknuti++;
+
+      if (pocetKliknuti % 10 === 0) {
+        return vulgarniHlasky[Math.floor(Math.random() * vulgarniHlasky.length)];
+      }
+
       let index;
       do {
         index = Math.floor(Math.random() * hlasky.length);
@@ -112,8 +245,18 @@
       return hlasky[index];
     }
 
+    function spustitShake() {
+      document.body.classList.add("shake");
+      document.body.addEventListener("animationend", function () {
+        document.body.classList.remove("shake");
+      }, { once: true });
+    }
+
     document.getElementById("btn").addEventListener("click", function () {
       document.getElementById("hlaska").textContent = nahodnaHlaska();
+      if (pocetKliknuti % 10 === 0) {
+        spustitShake();
+      }
     });
   </script>
 </body>

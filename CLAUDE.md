@@ -20,6 +20,7 @@ Interní projekt pro testování vývojového workflow a práce s Claude Code.
 - Český jazyk v celém uživatelském rozhraní (kopí, názvy tlačítek, chyby).
 - Po každé změně aktualizuj dokumentaci
 - Známé bugy zapiš do KNOWN_ISSUES.md
+- Po každé iteraci aktualizuj CHANGELOG.md a README.md s tím, co se změnilo
 
 ## Omezení pro tuto fázi (DŮLEŽITÉ)
 - Udrž implementaci maximálně jednoduchou (jedna stránka, minima markupu a logiky).
