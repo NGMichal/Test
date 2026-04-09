@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1 — 2026-04-09
+
+### Opraveno
+- Oprava bugu: typografické uvozovky („ ") v hlášce způsobovaly syntaktickou chybu JS — celý script blok selhal a tlačítko nefungovalo
+
 ## 1.1.0 — 2026-04-09
 
 ### Změněno
